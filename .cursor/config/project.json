@@ -1,0 +1,106 @@
+{
+  "project": {
+    "name": "Garry n8n Decision Action",
+    "description": "Decision-to-Action Automation System using n8n workflows. Converts human decisions (text-based) into safe, auditable, step-by-step actions.",
+    "version": "0.1.0",
+    "repository": "https://github.com/girijashankarj/garry-n8n-decision-action"
+  },
+  "cursor": {
+    "include": {
+      "patterns": ["src/**", "tests/**", "config/**", "docs/**"],
+      "priorityFiles": [
+        "README.md",
+        "package.json",
+        "tsconfig.json",
+        "tsconfig.app.json",
+        "tsconfig.test.json",
+        "vite.config.ts",
+        "jest.config.cjs"
+      ]
+    },
+    "exclude": {
+      "patterns": ["node_modules/**", "dist/**", ".git/**", "coverage/**"],
+      "largeFiles": ["*.lock", "*.map", "*.min.js", "*.min.css"],
+      "secrets": [".env", ".env.*", "!.env.example"]
+    },
+    "tokenOptimization": {
+      "contextLayers": {
+        "immediate": 2000,
+        "relevant": 5000,
+        "extended": 10000,
+        "reference": 20000
+      }
+    }
+  },
+  "paths": {
+    "source": "src/",
+    "components": "src/components/",
+    "engine": "src/lib/engine/",
+    "exporters": "src/lib/exporters/",
+    "data": "src/lib/data/",
+    "n8n": "src/lib/n8n/",
+    "common": "src/common/",
+    "store": "src/store/",
+    "hooks": "src/hooks/",
+    "utils": "src/utils/",
+    "types": "src/types/",
+    "tests": "tests/",
+    "mocks": "tests/mock/",
+    "docs": "docs/"
+  },
+  "techStack": {
+    "language": "TypeScript 5.8",
+    "runtime": "Browser (client-only SPA)",
+    "framework": "React 19",
+    "uiLibrary": "shadcn/ui (Radix UI primitives)",
+    "styling": "Tailwind CSS v4",
+    "buildTool": "Vite 7",
+    "stateManagement": "Redux Toolkit",
+    "persistence": "localStorage via useLocalStorage hook",
+    "toasts": "sonner",
+    "testing": "Jest + @testing-library/react + ts-jest",
+    "linter": "ESLint 9 (flat config)",
+    "formatter": "Prettier",
+    "packageManager": "npm",
+    "nodeVersion": "24.13.0",
+    "automation": "n8n workflows"
+  },
+  "features": {
+    "workflows": [
+      "decision-intake",
+      "decision-analysis",
+      "action-extraction",
+      "risk-evaluation",
+      "approval-enforcement",
+      "action-execution",
+      "audit-logging"
+    ],
+    "exportFormats": ["clipboard", "markdown", "text", "json"],
+    "extras": [
+      "version history",
+      "audit trail",
+      "approval workflow"
+    ]
+  },
+  "testing": {
+    "coverageMinimum": 80,
+    "testCommand": "jest --coverage",
+    "singleFileTest": "jest --testPathPattern={file}",
+    "typeCheckCommand": "tsc -b",
+    "lintCommand": "eslint . --max-warnings 0"
+  },
+  "conventions": {
+    "branchPrefix": {
+      "feature": "feature/",
+      "bugfix": "fix/",
+      "hotfix": "hotfix/",
+      "release": "release/"
+    },
+    "commitFormat": "conventional",
+    "prTemplate": true,
+    "messageConstants": "src/common/messages/{info,error,warn,debug}.ts",
+    "storageKeys": "src/common/constants.ts → STORAGE_KEYS",
+    "fileNames": "src/common/fileNames.ts → FILE_NAMES",
+    "interfaces": "src/common/interfaces/index.ts → ApiResult, StorageResult"
+  }
+}
