@@ -76,11 +76,7 @@
       "audit-logging"
     ],
     "exportFormats": ["clipboard", "markdown", "text", "json"],
-    "extras": [
-      "version history",
-      "audit trail",
-      "approval workflow"
-    ]
+    "extras": ["version history", "audit trail", "approval workflow"]
   },
   "testing": {
     "coverageMinimum": 80,

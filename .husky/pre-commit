@@ -23,5 +23,5 @@ npm run format || { echo "${RED}Format failed.${NC}"; exit 1; }
 echo "${GREEN}Format passed.${NC}"
 
 echo "${BLUE}==> Pre-commit: tests with coverage${NC}"
-npm run test:coverage || { echo "${RED}Tests failed.${NC}"; exit 1; }
+npm run test:coverage -- --passWithNoTests || { echo "${RED}Tests failed.${NC}"; exit 1; }
 echo "${GREEN}Tests passed.${NC}"

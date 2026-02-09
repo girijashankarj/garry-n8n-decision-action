@@ -24,13 +24,14 @@
 The system converts **HUMAN DECISIONS** (text-based) into **SAFE, AUDITABLE, STEP-BY-STEP ACTIONS** using n8n workflows.
 
 **Key Principles:**
+
 - Never blindly execute high-risk actions
 - Always validate intent and risk
 - Require approval where needed
 - Log everything
 
-This is **NOT** a chatbot.  
-This is **NOT** auto-execution AI.  
+This is **NOT** a chatbot.
+This is **NOT** auto-execution AI.
 This is **DECISION GOVERNED AUTOMATION**.
 
 ---
@@ -39,15 +40,15 @@ This is **DECISION GOVERNED AUTOMATION**.
 
 ### Core Workflows
 
-| Workflow | Description |
-|----------|-------------|
-| **Decision Intake** | Trigger nodes, input normalization, metadata enrichment |
-| **Decision Analysis** | Extract decision type, impact level, urgency, reversibility |
-| **Action Extraction** | Identify explicit and implied actions, reject vague actions |
-| **Risk & Guardrail Evaluation** | Evaluate environment risk, time risk, blast radius |
-| **Human-in-the-Loop Approval** | Notify approvers, present summary, capture approval/rejection |
-| **Action Execution** | Execute approved, validated actions (idempotent, logged, reversible) |
-| **Audit & Traceability** | Log input, actions, risk evaluation, approval history, execution steps |
+| Workflow                        | Description                                                            |
+| ------------------------------- | ---------------------------------------------------------------------- |
+| **Decision Intake**             | Trigger nodes, input normalization, metadata enrichment                |
+| **Decision Analysis**           | Extract decision type, impact level, urgency, reversibility            |
+| **Action Extraction**           | Identify explicit and implied actions, reject vague actions            |
+| **Risk & Guardrail Evaluation** | Evaluate environment risk, time risk, blast radius                     |
+| **Human-in-the-Loop Approval**  | Notify approvers, present summary, capture approval/rejection          |
+| **Action Execution**            | Execute approved, validated actions (idempotent, logged, reversible)   |
+| **Audit & Traceability**        | Log input, actions, risk evaluation, approval history, execution steps |
 
 ### Security & Governance
 
